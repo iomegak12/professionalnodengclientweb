@@ -1,0 +1,28 @@
+<div ng-controller="slowResponseController" class="section">
+    <div class="left">
+        <h4>Slow Responses</h4>
+        <div class="content">
+            <p>Click these buttons to simulate slow transactions, and observe how slow transactions affect the overall response times and user experience counts.</p>
+        </div>
+
+        <br>
+
+        <button type="button" class="gray" ng-click="slowRequestGet(10)">10 second transaction</button>
+        <button type="button" class="gray" ng-click="slowRequestGet(30)">30 second transaction</button>
+        <button type="button" class="gray" ng-click="slowRequestGet(60)">60 second transaction</button>
+
+    </div>
+
+    <div class="right">
+        <div class="gray-text-box">
+            <h5>Slow Response Times</h5>
+
+            <p>AppDynamics provides default thresholds against which it compares the performance of every business transaction. Each transaction is classified into what are called a user experience: normal, slow, very slow, stall or error transaction.</p>
+
+            <br>
+
+            <button type="button" class="blue" style="height: 36px;" ng-click="openController('Slow Response Times')"> View Slow Response Times</button>
+        </div>
+    </div>
+
+</div>

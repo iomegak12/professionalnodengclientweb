@@ -1,0 +1,47 @@
+<div class="section">
+
+    <div class="left">
+        <h4>Getting Started with AppDynamics Sample App</h4>
+
+        <div class="content">
+            <p>Welcome to the Sample App, a simple Fruit Stand inventory application. You'll use this app to go through some key AppDynamics concepts:</p>
+
+            <br>
+
+            <p><b>1. Business Transactions</b></p> 
+            <p>Manage the inventory of a fruit vendor, and see how these end user operations are tracked as Business Transactions by AppDynamics.</p>
+
+            <p><b>2. Flow Map</b></p> 
+            <p>See how the sample app architecture maps to visual representations in the AppDynamics user interface.</p>
+
+            <p><b>3. Error Detection</b></p> 
+            <p>Generate different kinds of application errors, and learn how these errors are tracked by AppDynamics.</p>
+
+            <br>
+
+            <p><span class="keyword">AppDynamics Agents</span> that monitor this application have already been configured for this Sample Application. The agents will send performance data to your <span class="keyword">AppDynamics Controller</span>, which assembles, processes, and presents the data.</p>
+        </div>
+
+        <img style="margin-top: 36px;" src="img/infogrph_SampleApp.svg" />
+
+        <br>
+
+    </div>
+
+    <div class="right">
+        <div class="gray-text-box">
+            <h5>Tiers</h5>
+
+            <p>The Tier list in the Controller UI lets you view an organize the tiers in your business application and the monitored nodes within each tier.</p>
+
+            <br>
+
+            <img style="margin-bottom: 20px;" src="img/screenshots/tiers.png" />
+
+            <button type="button" class="blue" style="height: 36px;" ng-click="openController('Tiers')">View the List of Monitored Sample App Tiers</button>
+        </div>
+
+    </div>
+
+</div>
+    <button type="button" class="blue" style="margin-top: 50px; width:256px; height: 36px; float:right" ng-click="navigateTo('fruitStand')">Next &#8594;</button>

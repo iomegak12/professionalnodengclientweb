@@ -1,0 +1,97 @@
+<div ng-controller="businessTransactionController" class="section">
+    <div class="left">
+        <h4>Business Transactions</h4>
+
+        <div class="content">
+            <p>The Sample App is a fruit stand inventory management system.</p>
+            
+            <p>There are four kinds of fruit currently available at the fruit stand. The stand is initially stocked with 100 apples, 100 oranges, 100 bananas, and 100 lemons. Let’s generate some load by using the Fruit Stand application.</p>
+        </div>
+
+        <br>
+
+        <table class="products">
+            <p style="font-size:16px"><b> Fruit Stand Inventory </b></p>
+            <thead>
+            <tr>
+                <th>
+                    <p>Item</p>
+                </th>
+                <th class="quantity">
+                    <p>Quantity</p>
+                </th>
+                <th>
+                    <p>Action</p>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="product in products">
+                <td>
+                    <p>{{product.name}}</p>
+                </td>
+                <td class="quantity">
+                    <p style="margin-top: 9px;">{{product.stock}}</p>
+                </td>
+                <td>
+                    <button type="button" ng-click="product.save(false)" ng-disabled="product.loading" class="gray"> Stock One
+                    </button>
+
+                    <button type="button" ng-click="product.save(true)" ng-disabled="product.loading" class="gray"> Sell One
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <button type="button" ng-click="setBananas()" style="margin-top: 23px; margin-bottom: 40px;" class="gray"> Stock Bananas </button>
+
+        <button type="button" ng-click="removeOranges()" style="margin-top: 23px; margin-bottom: 40px;" class="gray"> Remove Oranges </button>
+       
+        <button type="button" class="gray" style="margin-top: 23px; margin-bottom: 40px;" ng-click="reset()"></span> Restock </button>
+
+        <div class="content">
+        <p style="font-size:16px"><b>Try this: </b></p>
+        <p style="margin-left:20px">1. You’ve just sold 5 apples! Click “Sell One” 5 times.</p> 
+        <p style="margin-left:20px">2. It’s the end of the day and your suppliers are refreshing your inventory. Click “Restock” to reset your initial stock back to 100 apples, 100 oranges, 100 bananas, and 100 lemons.</p> 
+        <p style="margin-left:20px">3. Bananas have just come in season and you found a supplier. Click “Stock Bananas" to add them to your inventory list.</p> 
+        <p style="margin-left:20px">4. Your orange supplier is going out of business, so you won’t be selling them at the fruit stand. Click “Remove Oranges" to remove them from the inventory list. </p> 
+
+        <br>
+
+        <p>Each of these operations is automatically tracked by AppDynamics as a <span class="keyword">Business Transaction</span>.</p>
+
+        </p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="gray-text-box">
+            <h5>What is a Business Transaction</h5>
+
+            <p>A Business Transaction represents the end-to-end processing path used to fulfill a service request in the monitored environment. The Agents monitoring the sample app have sent data to the AppDynamics Controller.</p>
+            <p>In the Business Transaction List view, you can see all the Business Transactions discovered by AppDynamics, and basic metrics like load (Calls/min) and the average response time it takes to execute.</p>
+
+            <p><b> Note: It takes up to 2 minutes for Business Transactions and metrics to update. </b></p>
+            
+            <br>
+            
+            <img style="margin-bottom: 10px;" src="img/screenshots/business_transactions.png" />
+            <button type="button" class="blue" style="height: 36px;" ng-click="openController('Business Transaction List')">View Business Transaction List</button>
+        </div>
+
+        <br>
+
+        <div class="gray-text-box">
+            <h5>Application Flow Map</h5>
+
+            <p>Flow maps present a dynamic, visual representation of the components and activities of your monitored application environment. Flow maps show the tiers, nodes, message queues and databases in the environment, and the business transactions that flow through them.</p>
+
+            <br>
+
+            <img style="margin-bottom: 20px;" src="img/screenshots/flowmap.png" />
+
+            <button type="button" class="blue" style="height: 36px;" ng-click="openController('Flow Map')">View Flow Map</button>
+        </div>
+    </div>
+</div>
