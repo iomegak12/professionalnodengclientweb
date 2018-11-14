@@ -6,6 +6,17 @@ var bodyParser = require('body-parser');
 var domain = require('domain').create();
 var http = require('http');
 
+require("appdynamics").profile({
+  controllerHostName: 'castro2018111319544211.saas.appdynamics.com',
+  controllerPort: '443',
+  controllerSslEnabled: true,
+  accountName: 'castro2018111319544211',
+  accountAccessKey: 'dyxac69gvb1q',
+  applicationName: 'SampleApp',
+  tierName: 'WebServices',
+  nodeName: 'WebNode'
+});
+
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true

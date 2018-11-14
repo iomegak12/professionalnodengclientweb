@@ -22,12 +22,25 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
     <![endif]-->
+
+    <script charset='UTF-8'>
+        window['adrum-start-time'] = new Date().getTime();
+        (function (config) {
+            config.appKey = 'AD-AAB-AAM-WGY';
+            config.adrumExtUrlHttp = 'http://cdn.appdynamics.com';
+            config.adrumExtUrlHttps = 'https://cdn.appdynamics.com';
+            config.beaconUrlHttp = 'http://col.eum-appdynamics.com';
+            config.beaconUrlHttps = 'https://col.eum-appdynamics.com';
+            config.xd = { enable: true };
+        })(window['adrum-config'] || (window['adrum-config'] = {}));
+    </script>
+    <script src='//cdn.appdynamics.com/adrum/adrum.js'></script>
 </head>
 
 <body ng-controller="mainController" style="padding-top: 0px;">
 
-<!-- Navigation -->
-<nav>
+    <!-- Navigation -->
+    <nav>
         <!-- Brand and toggle get grouped for better mobile display -->
         <table style="margin-left: 13px; margin-top: -3px;">
             <tr>
@@ -38,30 +51,33 @@
                     <p style="color: #fff; display: inline-block; font-family: 'Helvetica Neue'; font-weight: 200; font-size: 18px; padding-right: 4px;">|</p>
                 </td>
                 <td>
-                    <p style="color: #fff; display: inline-block; font-family: 'Helvetica Neue'; font-weight: 200; font-size: 18px; padding-top: 4px;"> SAMPLE APP</p>
+                    <p style="color: #fff; display: inline-block; font-family: 'Helvetica Neue'; font-weight: 200; font-size: 18px; padding-top: 4px;">
+                        SAMPLE APP</p>
                 </td>
-                <td> <ad-loader></ad-loader> </td>
+                <td>
+                    <ad-loader></ad-loader>
+                </td>
             </tr>
         </table>
-</nav>
+    </nav>
 
-<!-- Page Content -->
-<div ng-show="ready" style="width: 100%;">
-    <div ng-view style="margin: 40px 58px;"></div>
-</div>
-<!-- /.container -->
-<script src="js/libs/jquery.min.js"></script>
-<script src="js/libs/angular.min.js"></script>
-<script src="js/libs/bootstrap.min.js"></script>
-<script src="js/libs/angular-route.min.js"></script>
-<script src="js/appd.js"></script>
-<script src="js/controllers/MainController.js"></script>
-<script src="js/controllers/BusinessTransactionController.js"></script>
-<script src="js/services/BusinessTransactionService.js"></script>
-<script src="js/controllers/ExceptionsController.js"></script>
-<script src="js/services/ExceptionsService.js"></script>
-<script src="js/controllers/SlowResponseController.js"></script>
-<script src="js/appd-controller.js"></script>
+    <!-- Page Content -->
+    <div ng-show="ready" style="width: 100%;">
+        <div ng-view style="margin: 40px 58px;"></div>
+    </div>
+    <!-- /.container -->
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/angular-route.min.js"></script>
+    <script src="js/appd.js"></script>
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/BusinessTransactionController.js"></script>
+    <script src="js/services/BusinessTransactionService.js"></script>
+    <script src="js/controllers/ExceptionsController.js"></script>
+    <script src="js/services/ExceptionsService.js"></script>
+    <script src="js/controllers/SlowResponseController.js"></script>
+    <script src="js/appd-controller.js"></script>
 </body>
 
 </html>
