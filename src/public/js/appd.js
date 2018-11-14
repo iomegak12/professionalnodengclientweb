@@ -27,6 +27,10 @@
             templateUrl : 'view/congratulations.html'
         });
 
+        $routeProvider.when('/slowResponse', {
+            templateUrl : 'view/SlowResponse.html'
+        });
+
         $routeProvider.otherwise({
             redirectTo: '/'
         });
