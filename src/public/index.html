@@ -6,14 +6,14 @@
         window['adrum-start-time'] = new Date().getTime();
         (function(config){
             config.appKey = 'AD-AAB-AAM-WGY';
-            config.adrumExtUrlHttp = 'http://cdn.appdynamics.com';
-            config.adrumExtUrlHttps = 'https://cdn.appdynamics.com';
+            config.adrumExtUrlHttp = 'http://localhost';
+            config.adrumExtUrlHttps = 'https://localhost';
             config.beaconUrlHttp = 'http://col.eum-appdynamics.com';
             config.beaconUrlHttps = 'https://col.eum-appdynamics.com';
-            config.xd = {enable : true};
+            config.xd = {enable : false};
         })(window['adrum-config'] || (window['adrum-config'] = {}));
         </script>
-        <script src='//cdn.appdynamics.com/adrum/adrum-4.5.1.1066.js'></script>
+        <script src='/js/adrum.js'></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
