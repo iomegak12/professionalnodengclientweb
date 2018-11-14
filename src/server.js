@@ -50,7 +50,7 @@ function productsCall(method, params, serverRequest, res) {
 
   data = {
     method: method,
-    url: "http://localhost:8083/api/notes/" + id,
+    url: "http://restserver:8083/api/notes/" + id,
     body: params,
     headers: {
       'Content-Type': 'application/json',
@@ -62,7 +62,6 @@ function productsCall(method, params, serverRequest, res) {
     if (apiResponse && body) {
       var parsedBody = JSON.parse(body);
 
-      console.log('METHOD : ' + method);
       if (method === "POST" || method === "PUT" || method === "DELETE") {
         body = {
           id: parsedBody.id,
@@ -109,7 +108,7 @@ server.get('/exception', function (serverRequest, response) {
 server.get('/sql_error', function (serverRequest, res) {
   data = {
     method: "GET",
-    url: "http://localhost:8083/api/notes/sql_error"
+    url: "http://restserver:8083/api/notes/sql_error"
   };
 
   request(data, function (error, apiResponse, body) {
@@ -124,7 +123,7 @@ server.get('/sql_error', function (serverRequest, res) {
 server.get('/java_error', function (serverRequest, res) {
   data = {
     method: "GET",
-    url: "http://localhost:8083/api/notes/java_error"
+    url: "http://restserver:8083/api/notes/java_error"
   };
 
   request(data, function (error, apiResponse, body) {
@@ -139,7 +138,7 @@ server.get('/java_error', function (serverRequest, res) {
 server.get('/exceptions/slow/10', function (serverRequest, res) {
   data = {
     method: "GET",
-    url: "http://localhost:8083/api/notes/slow/10"
+    url: "http://restserver:8083/api/notes/slow/10"
   };
 
   request(data, function (error, apiResponse, body) {
@@ -157,7 +156,7 @@ server.get('/exceptions/slow/10', function (serverRequest, res) {
 server.get('/exceptions/slow/20', function (serverRequest, res) {
   data = {
     method: "GET",
-    url: "http://localhost:8083/api/notes/slow/20"
+    url: "http://restserver:8083/api/notes/slow/20"
   };
 
   request(data, function (error, apiResponse, body) {
@@ -172,7 +171,7 @@ server.get('/exceptions/slow/20', function (serverRequest, res) {
 server.get('/exceptions/slow/30', function (serverRequest, res) {
   data = {
     method: "GET",
-    url: "http://localhost:8083/api/notes/slow/30"
+    url: "http://restserver:8083/api/notes/slow/30"
   };
 
   request(data, function (error, apiResponse, body) {
