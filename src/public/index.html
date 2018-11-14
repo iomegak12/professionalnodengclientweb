@@ -25,16 +25,16 @@
 
     <script charset='UTF-8'>
         window['adrum-start-time'] = new Date().getTime();
-        (function (config) {
+        (function(config){
             config.appKey = 'AD-AAB-AAM-WGY';
             config.adrumExtUrlHttp = 'http://cdn.appdynamics.com';
             config.adrumExtUrlHttps = 'https://cdn.appdynamics.com';
             config.beaconUrlHttp = 'http://col.eum-appdynamics.com';
             config.beaconUrlHttps = 'https://col.eum-appdynamics.com';
-            config.xd = { enable: true };
+            config.xd = {enable : true};
         })(window['adrum-config'] || (window['adrum-config'] = {}));
-    </script>
-    <script src='//cdn.appdynamics.com/adrum/adrum.js'></script>
+        </script>
+        <script src='//cdn.appdynamics.com/adrum/adrum-4.5.1.1066.js'></script>
 </head>
 
 <body ng-controller="mainController" style="padding-top: 0px;">
