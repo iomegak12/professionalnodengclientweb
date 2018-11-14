@@ -46,8 +46,6 @@ function productsCall(method, params, serverRequest, res) {
     id = serverRequest.query["id"];
   }
 
-  console.log(params);
-
   data = {
     method: method,
     url: "http://restserver:8083/api/notes/" + id,
