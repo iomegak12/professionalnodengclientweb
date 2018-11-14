@@ -84,8 +84,6 @@ function productsCall(method, params, serverRequest, res) {
         body = JSON.stringify(items);
       }
 
-      console.log(body);
-
       res.send(body);
     } else {
       res.send(params);
