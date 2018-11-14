@@ -1,11 +1,4 @@
 
-var express = require('express');
-var server = express();
-var request = require('request');
-var bodyParser = require('body-parser');
-var domain = require('domain').create();
-var http = require('http');
-
 require("appdynamics").profile({
   controllerHostName: 'castro2018111319544211.saas.appdynamics.com',
   controllerPort: '443',
@@ -16,6 +9,13 @@ require("appdynamics").profile({
   tierName: 'WebServices',
   nodeName: 'WebNode'
 });
+
+var express = require('express');
+var server = express();
+var request = require('request');
+var bodyParser = require('body-parser');
+var domain = require('domain').create();
+var http = require('http');
 
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({     // to support URL-encoded bodies
